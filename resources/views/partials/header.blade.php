@@ -37,7 +37,7 @@
                                     <a href="#">Team</a>
                                     <ul class="sub-menu">
                                         <li><a href="{{ route('team.index') }}">Team</a></li>
-                                        <li><a href="banani.html">Coach</a></li>
+                                        <li><a href="{{ route('coaches.index') }}">Coach</a></li>
                                     </ul>
                                 </li>
 
@@ -69,15 +69,10 @@
 
                                 <!-- Berita -->
                                 <li class="menu-item-has-children">
-                                    <a href="#">Berita</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="blog.html">Berita Terbaru</a></li>
-                                        <li><a href="blog-left.html">Kategori Berita</a></li>
-                                        <li><a href="blog-right.html">Berita Vidio</a></li>
-                                    </ul>
+                                    <a href="{{ route('news.index') }}">Berita</a>
                                 </li>
 
-                                <!-- Jadwal Pertandingan -->
+                             
 
 
                                 <!-- Contact -->
@@ -91,5 +86,6 @@
                         </div>
                     </div>
                 </div>
-
+            </div>
+        </div>
 </header>

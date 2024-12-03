@@ -71,6 +71,7 @@ class TeamController extends Controller
         if ($request->hasFile('image')) {
             if ($team->image) {
                 Storage::disk('public')->delete($team->image);
+                
             }
             $validated['image'] = $request->file('image')->store('team-images', 'public');
         }

@@ -25,7 +25,7 @@
                                 <div class="slider-image">
                                     <img data-animation-in="bounceInRight" data-animation-out="animate-out fadeOut" src="{{ asset('template_wbfc/images/full-slider/image-layer2.png') }}" alt="layer image">
                                 </div>
-                            </div>
+                            </div> 
                         </div>
                     </div>
                 </div>

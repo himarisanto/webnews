@@ -21,23 +21,20 @@
         </div>
     </div>
 </div>
+
 <div class="our-team-section team-inner-page sec-spacer">
     <div class="container">
         <div class="row">
             @foreach($teams as $team)
-            <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="col-md-3 col-sm-6 col-xs-6">
                 <div class="our-team">
-                    <img src="{{ asset('storage/' . $team->image) }}" alt="Photo of {{ $team->name }}" class="img-fluid" />
-                    <div class="person-details">
+                <img src="{{ $team->image ? asset('storage/' . $team->image) : asset('template_wbfc/images/default.jpg') }}" alt="Photo of {{ $team->name }}" class="img-fluid" />
+                    <div class="person-details" style="height: 190px; background-color: #f0f0f0;">
                         <div class="overly-bg"></div>
-                            <h5 class="person-name">{{ $team->name }}</h5>
+                        <h5 class="person-name">{{ $team->name }}</h5>
                         </a>
                         <table class="person-info">
                             <tbody>
-                                <!-- <tr>
-                                    <td>Born</td>
-                                    <td>{{ $team->birth_date }}</td>
-                                </tr> -->
                                 <tr>
                                     <td>Position</td>
                                     <td>{{ $team->position }}</td>
@@ -51,19 +48,10 @@
                                     <td>{{ $team->previous_club }}</td>
                                 </tr>
                                 <tr>
-                                   <td>Jumlah Gol</td>
-                                   <td>{{ $team->jumlah_gol}}</td>
+                                    <td>Jumlah Gol</td>
+                                    <td>{{ $team->jumlah_gol}}</td>
                                 </tr>
-                                <!-- <tr>
-                                    <td>Follow us on</td>
-                                    <td>
-                                        <ul class="person-social-icons">
-                                            <li><a href="#" class="active"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                        </ul>
-                                    </td>
-                                </tr> -->
+
                             </tbody>
                         </table>
                     </div>
@@ -74,6 +62,4 @@
     </div>
 </div>
 
-@endsection 
-
-	
+@endsection
